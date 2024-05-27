@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:padding="10dp"
+                android:orientation="vertical"
+                android:background="@color/green"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_centerVertical="true"
+                        app:tint="@color/white"
+                        android:src="@drawable/back_btn"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp" />
+                    <TextView
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_centerHorizontal="true"
+                        android:text="Add"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginTop="150dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textColor="@color/yellowish"
+                        android:textSize="16sp"
+                        android:text="How much?"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textStyle="bold"
+                            android:textSize="30sp"
+                            android:textColor="@color/white"
+                            android:text="₹"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <EditText
+                            android:id="@+id/amount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:background="@android:color/transparent"
+                            android:hint="Amount"
+                            android:textColor="@color/white"
+                            android:textSize="40sp"
+                            android:inputType="number"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:padding="10dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/paymentType"
+                android:padding="10dp"
+                android:hint="Online or Cash?"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/stroke"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"/>
+
+            <EditText
+                android:id="@+id/description"
+                android:padding="10dp"
+                android:hint="Description"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/stroke"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"/>
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:id="@+id/incomeRadio"
+                    android:text="Income"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <RadioButton
+                    android:checked="true"
+                    android:id="@+id/expenseRadio"
+                    android:text="Expense"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RadioGroup>
+        </LinearLayout>
+    </LinearLayout>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/add_btn"
+        android:layout_alignParentBottom="true"
+        app:cardCornerRadius="10dp"
+        android:layout_margin="10dp"
+        android:backgroundTint="@color/green"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/add_text"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:padding="20dp"
+            android:textColor="@color/white"
+            android:text="Add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
